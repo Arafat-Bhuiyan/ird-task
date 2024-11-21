@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Timeline } from "flowbite-react";
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,32 +34,32 @@ const Dropdown = () => {
 
       {/* Dropdown Content */}
       {isOpen && (
-        <ul className="mt-4 space-y-2 border-t border-gray-300 pt-4">
-          <li className="flex items-center text-gray-700">
+        <ul className="mt-4 space-y-2 pt-4 border-l border-dotted border-green-400">
+          <li className="flex items-center text-gray-700 ml-[-4px]">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
             What is Dua
           </li>
-          <li className="flex items-center text-gray-700">
+          <li className="flex items-center text-gray-700 ml-[-4px]">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
             Conditions for Dua to be successful
           </li>
-          <li className="flex items-center text-gray-700">
+          <li className="flex items-center text-gray-700 ml-[-4px]">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
             The Method of Dua
           </li>
-          <li className="flex items-center text-gray-700">
+          <li className="flex items-center text-gray-700 ml-[-4px]">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
             Before Dua
           </li>
-          <li className="flex items-center text-gray-700">
+          <li className="flex items-center text-gray-700 ml-[-4px]">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
             During Dua
           </li>
-          <li className="flex items-center text-gray-700">
+          <li className="flex items-center text-gray-700 ml-[-4px]">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
             Prerequisites of writing Dua and drinking its water
           </li>
-          <li className="flex items-center text-gray-700">
+          <li className="flex items-center text-gray-700 ml-[-4px]">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
             The correct way to perform Dua for a small child
           </li>
