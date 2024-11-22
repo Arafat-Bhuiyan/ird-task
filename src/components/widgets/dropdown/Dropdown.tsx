@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Timeline } from "flowbite-react";
 
-const Dropdown = () => {
+const Dropdown = ({ data }: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,9 +21,11 @@ const Dropdown = () => {
           />
           <div>
             <h3 className="text-lg font-semibold text-gray-800">
-              Introduction to Dua
+              {data.cat_name_en}
             </h3>
-            <p className="text-sm text-gray-500">Subcategory: 11</p>
+            <p className="text-sm text-gray-500">
+              Subcategory: {data.no_of_subcat}
+            </p>
           </div>
         </div>
 

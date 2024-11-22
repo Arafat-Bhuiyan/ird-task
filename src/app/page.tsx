@@ -5,11 +5,11 @@ import { Duas } from "@/components/widgets/duas";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex lg:flex-row min-h-screen">
       <Navbar />
       <div className="w-full">
         <SearchBar />
-        <div className="flex w-full gap-4 px-4">
+        <div className="flex h-screen w-full gap-4 px-4">
           <Categories />
           <Duas />
         </div>

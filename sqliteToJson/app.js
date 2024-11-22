@@ -6,8 +6,12 @@ const db = new sqlite3.Database(dbPath);
 
 const data = [];
 
+const duaKey = "dua";
+const categoryKey = "category";
+const subCategoryKey = "sub_category";
+
 db.each(
-  "SELECT * FROM dua",
+  `SELECT * FROM ${subCategoryKey}`,
   (err, row) => {
     if (err) {
       console.error(err);
@@ -20,7 +24,7 @@ db.each(
       console.error(err);
     } else {
       console.log(`${numRows} rows fetched`);
-      fs.writeFileSync("output.json", JSON.stringify(data, null, 2)); // Save the data in JSON format
+      fs.writeFileSync(`${subCategoryKey}.json`, JSON.stringify(data, null, 2)); // Save the data in JSON format
       console.log("Data saved to output.json");
     }
   }

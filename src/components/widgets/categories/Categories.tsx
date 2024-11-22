@@ -1,10 +1,17 @@
 "use client";
 
 import { Dropdown } from "../dropdown";
+import { useFetchData } from "@/hook";
+import { Loading } from "@/components/common/loading";
 
 export default function Categories() {
+  const [categories, loading] = useFetchData("category");
+
+  console.log("DATA -- ", categories);
+  console.log("LOADING - ", loading);
+
   return (
-    <div className="w-1/3">
+    <div className="w-1/3 overflow-y-scroll">
       <h1 className="flex items-center justify-center bg-green-600 text-white font-semibold py-4 rounded-t-xl">
         Categories
       </h1>
@@ -23,10 +30,13 @@ export default function Categories() {
           />
         </div>
         {/* Categories Dropdown */}
-        <Dropdown />
-        <Dropdown />
-        <Dropdown />
-        <Dropdown />
+        {loading ? (
+          <Loading />
+        ) : (
+          categories?.map((category: any) => (
+            <Dropdown key={category.id} data={category} />
+          ))
+        )}
       </div>
     </div>
   );
