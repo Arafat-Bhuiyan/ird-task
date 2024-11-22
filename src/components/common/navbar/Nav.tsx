@@ -6,11 +6,13 @@ export default function Navbar() {
   return (
     <div>
       <div className="relative flex min-h-screen w-28 max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-4 m-6 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+        {/* Dua Logo */}
         <div className="flex items-center w-20 h-20 gap-4 p-4 mb-6">
           <Link href="/">
             <img src="/assets/dua-logo.png" alt="Dua Logo" />
           </Link>
         </div>
+        {/* navs */}
         <nav className="flex flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
           {/* Home */}
           <div
@@ -76,9 +78,10 @@ export default function Navbar() {
             </div>
           </div>
         </nav>
+        {/* Support */}
         <div className="flex items-center w-20 h-20 gap-4 p-4 mt-6">
           <Link href="/">
-            <img src="/assets/support.png" alt="Dua Logo" />
+            <img src="/assets/support.png" alt="" />
           </Link>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { Duas } from "@/components/widgets/duas";
 
 export default function Home() {
   return (
-    <div className="flex lg:flex-row min-h-screen">
+    <div className="flex lg:flex-row md:flex-col-reverse sm:flex-col-reverse min-h-screen">
       <Navbar />
       <div className="w-full">
         <SearchBar />
