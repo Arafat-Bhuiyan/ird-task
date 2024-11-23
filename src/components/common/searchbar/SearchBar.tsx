@@ -11,7 +11,7 @@ export default function SearchBar() {
     <div className="navbar mt-3 bg-gray-100">
       {/* Left Section: Logo */}
       <div className="flex-1">
-        <a className="btn btn-ghost text-3xl" href="/">
+        <a className="btn btn-ghost lg:text-3xl sm:text-xl" href="/">
           Dua & Ruqyah
         </a>
       </div>
@@ -23,7 +23,7 @@ export default function SearchBar() {
           <input
             type="text"
             placeholder="Search by Dua Name"
-            className="input input-bordered w-24 md:w-auto bg-white text-gray-700"
+            className="input input-bordered lg:w-24 sm:w-56 md:w-96 bg-white text-gray-700"
           />
           <img
             className="w-10 h-9 absolute top-[9.5px] right-[18px]"
