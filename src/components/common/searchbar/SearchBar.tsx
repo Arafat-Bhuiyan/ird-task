@@ -12,7 +12,7 @@ export default function SearchBar() {
       {/* Left Section: Logo */}
       <div className="flex-1">
         <a className="btn btn-ghost text-3xl" href="/">
-          Duas Page
+          Dua & Ruqyah
         </a>
       </div>
 

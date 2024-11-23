@@ -5,7 +5,8 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <div>
-      <div className="relative flex min-h-screen w-28 max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-4 m-6 text-gray-700 shadow-xl shadow-blue-gray-900/5">
+      {/* Large Screen Navbar */}
+      <div className="relative sm:hidden lg:block flex min-h-screen w-28 max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border p-4 m-6 text-gray-700 shadow-xl shadow-blue-gray-900/5">
         {/* Dua Logo */}
         <div className="flex items-center w-20 h-20 gap-4 p-4 mb-6">
           <Link href="/">
@@ -85,6 +86,26 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+      {/* Small and Medium Screen */}
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-xl rounded-t-[2rem]">
+        <div className="flex justify-around items-center p-2 font-sans text-base font-normal text-blue-gray-700">
+          <div role="button" className="p-3">
+            <img src="/assets/Home.png" alt="" />
+          </div>
+          <div role="button" className="p-3">
+            <img src="/assets/All_Duas.png" alt="" />
+          </div>
+          <div role="button" className="p-3">
+            <img src="/assets/Memorize.png" alt="" />
+          </div>
+          <div role="button" className="p-3">
+            <img src="/assets/Bookmark.png" alt="" />
+          </div>
+          <div role="button" className="p-3 w-[4.7rem] h-[4.7rem]">
+            <img src="/assets/profile-icon.png" alt="" />
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }
