@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/common/navbar";
 import { SearchBar } from "@/components/common/searchbar";
-import { Categories } from "@/components/widgets/categories";
+import { Categories, CategoriesDropdown } from "@/components/widgets/categories";
 import { Duas } from "@/components/widgets/duas";
 
 export default function Home() {
@@ -9,7 +9,10 @@ export default function Home() {
       <Navbar />
       <div className="w-full">
         <SearchBar />
-        <div className="flex h-screen w-full gap-4 px-4">
+        <div className="md:block sm:block lg:hidden">
+          <CategoriesDropdown/>
+        </div>
+        <div className="lg:flex sm:flex-none md:flex-none h-screen w-full gap-4 px-4">
           <Categories />
           <Duas />
         </div>

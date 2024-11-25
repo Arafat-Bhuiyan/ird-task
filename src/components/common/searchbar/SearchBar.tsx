@@ -23,7 +23,7 @@ export default function SearchBar() {
           <input
             type="text"
             placeholder="Search by Dua Name"
-            className="input input-bordered lg:w-24 sm:w-56 md:w-96 bg-white text-gray-700"
+            className="input input-bordered w-24 sm:w-56 md:w-80 bg-white text-gray-700"
           />
           <img
             className="w-10 h-9 absolute top-[9.5px] right-[18px]"

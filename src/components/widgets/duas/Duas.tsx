@@ -12,7 +12,7 @@ export default function Duas() {
   console.log("LOADING - ", loading);
 
   return (
-    <div className="flex flex-col w-2/3 min-h-screen shadow-md overflow-y-scroll">
+    <div className="flex flex-col lg:w-2/3 sm:w-full h-screen shadow-md overflow-y-scroll">
       <div className="bg-white rounded-lg pt-3 px-8">
         <h2 className="text-lg font-semibold mb-4 text-green-600">
           Section:{" "}
@@ -21,12 +21,11 @@ export default function Duas() {
           </span>
         </h2>
       </div>
-      {loading ? ( <Loading />) : (
-        duas?.map((dua: any) => (
-          <SurahCard key={dua.id} data={dua} />
-        ))
+      {loading ? (
+        <Loading />
+      ) : (
+        duas?.map((dua: any) => <SurahCard key={dua.id} data={dua} />)
       )}
-
     </div>
   );
 }
